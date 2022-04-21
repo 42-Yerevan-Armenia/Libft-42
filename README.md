@@ -1,7 +1,7 @@
 # Libft-42
 
-bzero		  () deletes the contents of str. If n = 0, bzero does nothing.
-malloc		() allocates memory by size and returns pointer to allocated memory.
+bzero		  () deletes the contents of str. If n = 0, bzero does nothing.\n
+malloc		() allocates memory by size and returns pointer to allocated memory.\n
 calloc		() allocates a memory block, which then resets it (bzero)
 isalpha 	() take char and if it is char return 1, if not 0 (int c - ascii) same for the rest
 itoa/atoi () itoa converts int to str, atoi str converts to int. For example we want to return 13 in str, 13/10 = 1 without balance, 13%10 = 3 balance,                for which we allocate space in malloc.
