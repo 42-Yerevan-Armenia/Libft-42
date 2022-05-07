@@ -11,14 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static size_t	ft_count(int n)//int-ը վերածում է str-ի
+//int to char
+static size_t	ft_count(int n)
 {
 	size_t	count;
 
 	count = 0;
-	if (n <= 0)//տեղ տա "-" ին
+	if (n <= 0)//give a place to "-"
 		count++;
 	while (n != 0)
 	{

@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arakhurs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/13 16:12:00 by arakhurs          #+#    #+#             */
-/*   Updated: 2022/03/15 19:51:29 by arakhurs         ###   ########.fr       */
+/*   Created: 2022/03/11 18:45:18 by arakhurs          #+#    #+#             */
+/*   Updated: 2022/03/13 17:26:31 by arakhurs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_calloc(size_t count, size_t size)
+//ջնջում է s-ի պարունակությունը: Եթե n = 0 է, bzero() ոչինչ չի անում:
+void	*ft_bzero(void *s, size_t n)
 {
-	size_t	str;
-	void	*dest;
+	size_t	i; //Hello n = 2
 
-	str = count * size;
-	dest = malloc(str);
-	if (!dest)
-		return (0);
-	ft_memset(dest, 0, str);
-	return (dest);
+	i = 0;
+	while (i < n)
+	{
+		*(char *)(s + i) = 0; //changes char of s[i] to "0"
+		i++;
+	}
+	return (s); //00llo
 }

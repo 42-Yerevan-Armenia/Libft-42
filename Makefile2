@@ -1,8 +1,8 @@
 NAME		=	libft.a
 
-SRCS		=	$(wildcard *.c)
+SRCS		=	$(*.c)
 
-BONUS		=	$(wildcard ft_lst*.c)
+BONUS		=	$(ft_lst*.c)
 
 FILTER		=	$(filter-out $(BONUS), $(SRCS))
 				

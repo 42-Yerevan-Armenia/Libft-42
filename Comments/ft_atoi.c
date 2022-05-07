@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_atoi(const char *str) //str-ը վերածում է int-ի
+//str to int
+int	ft_atoi(const char *str)
 {
 	int	i; //123
 	int	j;

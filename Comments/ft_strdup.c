@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arakhurs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 18:45:18 by arakhurs          #+#    #+#             */
-/*   Updated: 2022/03/13 17:26:31 by arakhurs         ###   ########.fr       */
+/*   Created: 2022/03/13 14:38:11 by arakhurs          #+#    #+#             */
+/*   Updated: 2022/03/13 17:05:39 by arakhurs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_bzero(void *s, size_t n) //ջնջում է s-ի պարունակությունը: Եթե n = 0 է, bzero() ոչինչ չի անում:
+//s1-ի պարունակությունը copy-ա անում str-ի մեջ
+char	*ft_strdup(const char *s1)
 {
-	size_t	i; //Hello n = 2
-
+	char	*str;
+	size_t	i;//Hello
+			  //01234
 	i = 0;
-	while (i < n)
+	str = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + 1));//allocating space for str at the same time in malloc
+	if (!str)//str i = 5 + \0
+		return (0);
+	while (s1[i])
 	{
-		*(char *)(s + i) = 0; //0ացնում է s-ի char-րը
+		str[i] = s1[i];
 		i++;
 	}
-	return (s); //00llo
+	str[i] = 0;// \0
+	return (str);//contents of malloc(str)
 }

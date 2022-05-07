@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//put number in lala.txt file
 void	ft_putnbr_fd(int n, int fd)
 
 {

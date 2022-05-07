@@ -40,7 +40,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 char	*ft_itoa(int n);
-char	**ft_split(char const *s, char c); //SEGM 07
+char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *s1);
 char	*ft_strjoin(char const *s1, char const *s2);

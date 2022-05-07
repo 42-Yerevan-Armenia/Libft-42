@@ -35,5 +35,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	str[j] = 0;
-	return (str);//malloc(str)-ի պարունակությունը HelloWorld\0
+	return (str);//contents of malloc(str) -> HelloWorld\0
 }

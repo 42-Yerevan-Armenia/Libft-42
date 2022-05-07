@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arakhurs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/09 12:27:51 by arakhurs          #+#    #+#             */
-/*   Updated: 2022/03/13 19:34:38 by arakhurs         ###   ########.fr       */
+/*   Created: 2022/03/12 17:36:23 by arakhurs          #+#    #+#             */
+/*   Updated: 2022/03/13 13:22:16 by arakhurs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_tolower(int c)
 {
-	write (fd, &c, 1);
-}
-
-int main()
-{
-	int fd = open("lala.txt", O_RDWR, 0644);
-	ft_putchar_fd('b', fd);
-	printf("fd=%d\n", fd);
-	return(0);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;//distance in ascii
+	return (c);
 }
