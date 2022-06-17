@@ -32,8 +32,7 @@ static size_t	my_abs(int n) //return only "+" int
 {
 	if (n < 0)
 		return (-n);
-	else
-		return (n);
+	return (n);
 }
 
 char	*ft_itoa(int n)//13
@@ -42,7 +41,7 @@ char	*ft_itoa(int n)//13
 	size_t	size;
 
 	size = ft_count(n);// = 2
-	str = (char *)malloc(sizeof(char) * (size + 1));//save 2 + \0
+	str = (char *)malloc(sizeof(char) * (size + 1));//save 2 + '\0'
 	if (str == 0)
 		return (NULL);
 	str[size] = '\0';
